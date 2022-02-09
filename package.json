@@ -24,6 +24,8 @@
     "babel-preset-nano-react-app": "^0.1.0",
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
+    "parcel": "2.2.1",
+    "sass": "^1.49.7",
     "vite": "^2.6.7"
   },
   "babel": {
