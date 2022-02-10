@@ -13,7 +13,6 @@ const App= () =>{
   const [currentMove, setCurrentMove] = useState(0);
 
   const current = history[currentMove];
-  console.log("history", history);
   
   const winner = calculateWinner(current.board);
    
@@ -40,7 +39,7 @@ const App= () =>{
 
   const moveTo = move => {
     setCurrentMove(move); 
-  }
+  };
 
   return (
   <div className="app" >
@@ -48,7 +47,8 @@ const App= () =>{
     <h2>{message}</h2> 
 
     <Board board={current.board} handleSquareClick= {handleSquareClick}/>
-   <History history={history} moveTo={moveTo}/>
+   <History history={history} moveTo={moveTo} currentMove = {currentMove}/>
+   
   </div>
 );
   };
