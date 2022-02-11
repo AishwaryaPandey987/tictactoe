@@ -29,7 +29,7 @@ const App = () => {
       });
       return prev.concat({ board: newBoard, isXNext: !last.isXNext });
     });
-    setCurrentMove((prev) => prev + 1);
+    setCurrentMove(prev => prev + 1);
   };
 
   const moveTo = (move) => {
@@ -43,7 +43,7 @@ const App = () => {
 
   return (
     <div className="app">
-      <h1>TIC TAC TOE</h1>
+      <h1 >TIC <span className="text-green">TAC</span> TOE</h1>
       <StatusMessage winner={winner} current={current}/> 
 
       <Board
@@ -51,10 +51,15 @@ const App = () => {
         handleSquareClick={handleSquareClick}
         winningSquares={winningSquares}
       />
-      <button type="button" onclick={onNewGame}>
-        Start new game
+      <button
+       type="button"
+      onClick={onNewGame} 
+      className = {`btn-reset ${winner ? 'active' : ' ' } ` }>
+      Start new game
       </button>
+      <h2 style={ { fontWeight : 'normal'}}>Current game history</h2>
       <History history={history} moveTo={moveTo} currentMove={currentMove} />
+    <div className="bg-balls"/>
     </div>
   );
 };

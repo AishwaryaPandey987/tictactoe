@@ -1,9 +1,11 @@
-
+$green: #12e177;
+$orange: #ffc72a;
+$blue: #4c43d4;
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: blue;
-  color:white;
+  background-color: $blue;
+  color: #fff;
   padding: 0;
   margin: 0;
 }
@@ -25,11 +27,11 @@ button {
 }
 
 .text-green {
-  color: green;
+  color: $green;
 }
 
 .text-orange {
-  color: orange;
+  color: $orange;
 }
 
 .history-wrapper {
@@ -49,16 +51,16 @@ button {
         display: inline-block;
         height: 5px;
         width: 5px;
-        background-color: green;
+        background-color: $green;
         margin-right: 4px;
         margin-bottom: 1px;
       }
 
       .btn-move {
-    	  color: white;
+    	  color: #fff;
         &.active {
           font-weight: bold;
-          color: green;
+          color: $green;
         }
       }
     }
@@ -76,15 +78,15 @@ button {
 
 .btn-reset {
   font-size: 0.8rem;
-  color: white;
+  color: #fff;
   border-radius: 15px;
   padding: 12px 18px;
   margin-top: 25px;
   transition: all 0.2s;
-  background-color: blue;
-  box-shadow: 0px 0px 0px 1px orange;
+  background-color: $blue;
+  box-shadow: 0px 0px 0px 1px $orange;
   &.active {
-    background-color: orange;
+    background-color: $orange;
     box-shadow: none;
   }
 }
@@ -93,15 +95,14 @@ button {
   .board-row {
     display: flex;
     flex-direction: row;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid #fff;
     &:last-child {
       border-bottom: none;
     }
     .square {
-  
       width: 80px;
       height: 80px;
-      border-right: 2px solid white;
+      border-right: 2px solid #fff;
       font-size: 2.5rem;
       padding: 0;
       overflow: hidden;
@@ -146,7 +147,7 @@ button {
   }
 
   &:before {
-    background-color: orange;
+    background-color: $orange;
     right: -75px;
     bottom: -75px;
     @media screen and (min-width: 476px) {
@@ -158,7 +159,7 @@ button {
   }
 
   &:after {
-    background-color: green;
+    background-color: $green;
     top: -75px;
     left: -75px;
     @media screen and (min-width: 476px) {
@@ -169,3 +170,4 @@ button {
     }
   }
 }
+
